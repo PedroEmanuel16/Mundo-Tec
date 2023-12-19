@@ -1,0 +1,8 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+p{
+    background-color: rgb(136, 204, 136);
+    padding: 30px;
+    border-radius: 30px;
+}
