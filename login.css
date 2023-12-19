@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans & display=swap');
+
+
+body {
+    margin: 0; 
+    font-family: 'Noto Sans', sans-serif;
+} /*anular borda laranja padrão do navegador*/
+
+
+.main-login{
+    width: 100vw;/*vw= porcentagem da largura da tela*/
+    height: 100vh;/*Em height utilizamos vh, altura da tela*/
+    background: #201b2c;/*Plano de fundo do site*/
+    display: flex; /*Deixa os elementos um ao lado do outro*/
+    justify-content: center; /*Centraliza as coisas no eixo x*/
+    align-items: center; /*Centraliza as coisas no eixo Y*/
+
+}
+
+.left-login {
+    width: 50vh; /*Ocupar 50% da largura da tela*/
+    height: 100vh; /*Ocupar a altura inteira da tela*/
+    display: flex; /*Organiza os elementos um ao lado do outro*/
+    justify-content: center; /*Centraliza as coisas no eixo x*/
+    align-items: center; /*Centraliza as coisas no eixo Y*/
+    flex-direction: column; /*Organiza os elementos um abaixo do outro*/
+    color: #00ff88;
+
+}
+
+.left-login > h1 {
+    color: #77ffc0; /*Cor do texto "h1"*/
+}
+
+.left-login-image{
+    width: 28vw;
+}
+
+.right-login {
+    width: 50vh; /*Ocupar 50% da largura da tela*/
+    height: 100vh; /*Ocupar a altura inteira da tela*/
+    display: flex; /*Deixa os elementos um ao lado do outro*/
+    justify-content: center; /*Centraliza as coisas no eixo x*/
+    align-items: center; /*Centraliza as coisas no eixo Y*/
+   
+}
+
+.card-login {
+    width: 60%; /*Largura do Card*/
+    display: flex; /*Deixa os elementos um ao lado do outro*/
+    justify-content: center; /*Centraliza as coisas no eixo x*/
+    align-items: center; /*Centraliza as coisas no eixo Y*/
+    flex-direction: column;
+    padding: 30px 35px; /*Margens para dentro do componente (O primeiro valor refere-se ao eixo Y) */
+    background: #2f2841; /*Fundo Card*/
+    border-radius: 20px; /*Bordas arredondadas*/
+    box-shadow: 0px 10px 40px #00000056; /*Sombra do card. Os valores se referem respectivamente a o eixo x,eixo Y, Blur ou desfoque e Cor.*/
+}
+
+.card-login > h1 {
+     color: #00ff88;
+     font-weight: 800; /*Grossura da fonte*/
+     margin: 0;
+}
+
+.textfild{
+   width: 100;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   margin: 10px 0px;
+}
+
+.textfild > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfild > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+.textfild > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase; /*Deixa o texto inteiro maiúsculo*/
+    font-weight: 800;
+    letter-spacing: 3px; /*espaçamento de texto*/
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer; /*Troca o cursor seta do windows por a "mão" quando colocada em cima do elemento*/
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+} /*Ajuda na responsividade do site(Enquanto for na tela a largura de 950px adicione estes elementos)*/
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}
